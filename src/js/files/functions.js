@@ -458,6 +458,7 @@ export function menuClose() {
 	bodyUnlock();
 	document.documentElement.classList.remove("menu-open");
 }
+
 // Модуль "показати ще" =======================================================================================================================================================================================================================
 export function showMore() {
 	window.addEventListener("load", function (e) {
