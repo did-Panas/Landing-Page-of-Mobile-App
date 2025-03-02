@@ -1,3 +1,5 @@
+// ===== HERO - SECTION =================
+
 .hero {
 	padding-top: toRem(138);
 
@@ -21,8 +23,6 @@
 			display: flex;
 			justify-content: space-between;
 			gap: toRem(50);
-
-			//padding-bottom: toRem(100);
 		}
 	}
 
@@ -129,5 +129,33 @@
 				transform: translate(-58%, 0);
 			}
 		}
+	}
+}
+
+// ===== DESCRIPTION - SECTION ==========
+
+.description {
+	// .description__container
+	&__container {
+	}
+
+	// .description__title
+	&__title {
+	}
+
+	// .description__image
+	&__image {
+	}
+
+	// .description__image-ibg
+	&__image-ibg {
+	}
+
+	// .description__image-ibg--contain
+	&__image-ibg--contain {
+	}
+
+	// .description__content
+	&__content {
 	}
 }
