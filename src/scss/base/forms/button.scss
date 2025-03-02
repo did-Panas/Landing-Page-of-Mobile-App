@@ -5,6 +5,10 @@
 	display: inline-flex;
 	align-items: center;
 
+	background-color: var(--accent);
+	color: var(--white);
+	font-family: "Clash Display", system-ui, sans-serif;
+
 	transition:
 		background-color 0.35s ease 0s,
 		color 0.3s ease-in 0s,
@@ -22,8 +26,6 @@
 		min-height: toRem(54);
 		padding: toRem(10) toRem(38);
 
-		color: var(--white);
-		background-color: var(--accent);
 		border: 1px solid transparent;
 		border-radius: 12.58px;
 		font-size: 23.67px;

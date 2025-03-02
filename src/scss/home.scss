@@ -1,25 +1,133 @@
 .hero {
+	padding-top: toRem(138);
+
+	background-image: url("@img/hero/bg@1x.jpeg");
+	@media (min-resolution: 2dppx) {
+		background-image: url("@img/hero/bg@2x.jpeg");
+	}
+	background-position: center center; /* x y */
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	@media (min-width: $mobile) {
+		padding-top: toRem(110);
+	}
+
 	// .hero__container
 	&__container {
+		@include adaptiveValue("padding-bottom", 100, 20, 2, 1200, 768);
+
+		@media (min-width: $mobile) {
+			display: flex;
+			justify-content: space-between;
+			gap: toRem(50);
+
+			//padding-bottom: toRem(100);
+		}
 	}
 
 	// .hero__content
 	&__content {
+		color: var(--white);
+		text-align: center;
+		overflow: hidden;
+
+		@include adaptiveValue("margin-top", 167, 0, 0, 1200, 768);
+		@include adaptiveValue("margin-left", 85, 25, 0, 1440, 1200);
+
+		@media (min-width: $mobile) {
+			text-align: left;
+			overflow: visible;
+		}
 	}
 
 	// .hero__title
 	&__title {
+		font-family: "Million Orcids", system-ui, sans-serif;
+		@include adaptiveValue("font-size", 100, 60, 0, 1200, 768);
+		line-height: 102%; /* 64/60 */
+		letter-spacing: 0.02em;
+
+		@media (min-width: $mobile) {
+			margin-bottom: toRem(17);
+		}
+
+		& span {
+			display: block;
+
+			font-family: "RedHatDisplay", system-ui, sans-serif;
+			@include adaptiveValue("font-size", 45, 30, 0, 1200, 768);
+			font-weight: 500;
+			letter-spacing: 0.022em;
+
+			@media (min-width: $mobile) {
+				line-height: 142.222222%; /* 64/45 */
+			}
+		}
 	}
 
 	// .hero__subtitle
 	&__subtitle {
+		max-width: toRem(370);
+		margin: toRem(0) auto toRem(34) auto;
+
+		font-family: "GaretBook", system-ui, sans-serif;
+		@include adaptiveValue("font-size", 33, 20, 0, 1200, 768);
+		font-weight: 300;
+		line-height: 150%; /* 30/20 */
+		letter-spacing: 0.07em;
+
+		@media (min-width: $mobile) {
+			max-width: toRem(610);
+			margin: toRem(0) toRem(0) toRem(41) toRem(0);
+
+			line-height: 121.212121%; /* 40/33 */
+		}
 	}
 
 	// .hero__btn
 	&__btn {
+		@include adaptiveValue("min-height", 73, 48, 0, 1200, 768);
+		margin-bottom: toRem(14.6);
+		@include adaptiveValue("padding-right", 50, 33, 0, 1200, 768);
+		@include adaptiveValue("padding-left", 50, 33, 0, 1200, 768);
+
+		@include adaptiveValue("border-radius", 17, 11, 0, 1200, 768);
+		@include adaptiveValue("font-size", 32, 21, 0, 1200, 768);
+		font-weight: 500;
+		line-height: 122.757318%; /* 26/21.18 */
+		letter-spacing: -0.01em;
 	}
 
 	// .hero__image
 	&__image {
+		aspect-ratio: 500 / 549;
+		@include adaptiveValue("height", 480, 533, 3, 767, 430);
+
+		@media (min-width: em(499.98)) {
+			width: 100%;
+		}
+
+		@media (min-width: $mobile) {
+			flex: 0 1 45.245171%; /* 609/1346 */
+		}
+
+		& img {
+			width: 116.27907%; /* 500/430 */
+			height: 103.001876%; /* 549/533 */
+			left: toRem(-110);
+
+			@media (min-width: em(499.98)) {
+				width: 100%;
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
+
+			@media (min-width: $mobile) {
+				width: 118%;
+				height: auto;
+				transform: translate(-58%, 0);
+			}
+		}
 	}
 }
