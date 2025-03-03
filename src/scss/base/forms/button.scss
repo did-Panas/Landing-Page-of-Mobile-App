@@ -23,13 +23,14 @@
 	}
 
 	&--basic {
-		min-height: toRem(54);
-		padding: toRem(10) toRem(38);
+		min-height: toRem(48);
+		padding: toRem(11) toRem(33);
 
 		border: 1px solid transparent;
 		border-radius: 12.58px;
-		font-size: 23.67px;
+		font-size: toRem(21);
 		font-weight: 500;
+		line-height: 123.809524%; /* 26/21 */
 	}
 
 	&--fw {

@@ -172,7 +172,7 @@
 	&__wrapper {
 		@include adaptiveValue("grid-column-gap", 98, 50, 0, 1200, 992);
 
-		padding: toRem(0) toRem(12);
+		padding: toRem(0) toRem(13);
 
 		@media (min-width: $mobile) {
 			display: grid;
@@ -226,7 +226,7 @@
 		}
 
 		& ul {
-			margin-bottom: toRem(27);
+			margin-bottom: toRem(20);
 
 			@media (min-width: $mobile) {
 				max-width: toRem(710);
@@ -341,10 +341,27 @@
 
 	// .cta__wrapper
 	&__wrapper {
+		display: grid;
+		grid-row-gap: toRem(39);
+		justify-items: center;
+		text-align: center;
+
+		margin: toRem(0) toRem(13);
+		padding: toRem(27) toRem(29) toRem(36);
+
+		background-color: var(--neutral-grey-3-42);
+		border-radius: toRem(30);
 	}
 
 	// .cta__image
 	&__image {
+		aspect-ratio: 94 / 94;
+		width: toRem(94);
+
+		background-image: url("@img/logo-sm.svg");
+		background-position: center center; /* x y */
+		background-size: contain;
+		background-repeat: no-repeat;
 	}
 
 	// .cta__content
@@ -353,10 +370,20 @@
 
 	// .cta__title
 	&__title {
+		margin-bottom: toRem(15);
+		padding: toRem(0) toRem(20);
+
+		font-size: toRem(20);
+		font-weight: 500;
+		line-height: 125%; /* 25/20 */
 	}
 
 	// .cta__txt
 	&__txt {
+		margin-bottom: toRem(30);
+
+		font-size: toRem(17);
+		line-height: 129.411765%; /* 22/17 */
 	}
 
 	// .cta__btn
