@@ -1,11 +1,11 @@
 .h2 {
-	font-size: toRem(30);
+	@include adaptiveValue("font-size", 50, 30, 0, 1200, 768);
 	font-weight: 500;
 	line-height: 126.666667%; /* 38/30 */
 }
 
 .h2-subtitle {
-	font-size: toRem(20);
+	@include adaptiveValue("font-size", 29, 20, 0, 1200, 768);
 	font-weight: 500;
 	line-height: 125%; /* 25/20 */
 }

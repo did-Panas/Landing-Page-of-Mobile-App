@@ -169,10 +169,15 @@ body {
 
 	// .page__cta
 	&__cta {
-		margin-bottom: toRem(113);
+		margin-bottom: toRem(122);
+
+		@media (min-width: $mobile) {
+			margin-bottom: toRem(112);
+		}
 	}
 
 	// .page__advantages
 	&__advantages {
+		margin-bottom: toRem(56);
 	}
 }
