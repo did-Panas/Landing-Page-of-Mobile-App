@@ -351,12 +351,26 @@
 
 		background-color: var(--neutral-grey-3-42);
 		border-radius: toRem(30);
+
+		@media (min-width: $mobile) {
+			grid-template-columns: auto 1fr;
+			@include adaptiveValue("grid-column-gap", 53, 30, 0, 991, 768);
+			justify-items: start;
+			text-align: left;
+
+			@include adaptiveValue("margin-right", 66, 0, 0, 1440, 992);
+			@include adaptiveValue("margin-left", 66, 0, 0, 1440, 992);
+			padding-top: toRem(31);
+			padding-bottom: toRem(36);
+			@include adaptiveValue("padding-right", 79, 40, 2, 991, 768);
+			@include adaptiveValue("padding-left", 91, 40, 2, 991, 768);
+		}
 	}
 
 	// .cta__image
 	&__image {
 		aspect-ratio: 94 / 94;
-		width: toRem(94);
+		@include adaptiveValue("width", 163, 94, 0, 1200, 768);
 
 		background-image: url("@img/logo-sm.svg");
 		background-position: center center; /* x y */
@@ -374,16 +388,30 @@
 		padding: toRem(0) toRem(20);
 
 		font-size: toRem(20);
+		@include adaptiveValue("font-size", 30, 20, 0, 1200, 768);
 		font-weight: 500;
 		line-height: 125%; /* 25/20 */
+
+		@media (min-width: $mobile) {
+			margin-bottom: toRem(2);
+			padding: 0;
+
+			line-height: 133.333333%; /* 40/30 */
+		}
 	}
 
 	// .cta__txt
 	&__txt {
 		margin-bottom: toRem(30);
 
-		font-size: toRem(17);
+		@include adaptiveValue("font-size", 20, 17, 0, 1200, 768);
 		line-height: 129.411765%; /* 22/17 */
+
+		@media (min-width: $mobile) {
+			margin-bottom: toRem(28);
+
+			font-weight: 300;
+		}
 	}
 
 	// .cta__btn

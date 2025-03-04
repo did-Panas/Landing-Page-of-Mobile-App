@@ -164,7 +164,7 @@ body {
 	&__description {
 		padding-top: toRem(145);
 		@include adaptiveValue("padding-top", 63, 145, 0, 1440, 768);
-		margin-bottom: toRem(48);
+		@include adaptiveValue("margin-bottom", 112, 48, 0, 1200, 768);
 	}
 
 	// .page__cta

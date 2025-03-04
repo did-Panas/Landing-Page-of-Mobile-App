@@ -23,14 +23,21 @@
 	}
 
 	&--basic {
-		min-height: toRem(48);
-		padding: toRem(11) toRem(33);
+		@include adaptiveValue("min-height", 54, 48, 0, 1200, 768);
+		padding-top: toRem(11);
+		padding-bottom: toRem(11);
+		@include adaptiveValue("padding-right", 38, 33, 0, 1200, 768);
+		@include adaptiveValue("padding-left", 38, 33, 0, 1200, 768);
 
 		border: 1px solid transparent;
 		border-radius: 12.58px;
-		font-size: toRem(21);
+		@include adaptiveValue("font-size", 24, 21, 0, 1200, 768);
 		font-weight: 500;
 		line-height: 123.809524%; /* 26/21 */
+
+		@media (min-width: $mobile) {
+			line-height: 129.166667%; /* 31/24 */
+		}
 	}
 
 	&--fw {
