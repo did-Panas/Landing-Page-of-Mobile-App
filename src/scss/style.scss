@@ -179,9 +179,14 @@ body {
 	// .page__advantages
 	&__advantages {
 		margin-bottom: toRem(56);
+
+		@media (min-width: $mobile) {
+			margin-bottom: toRem(106);
+		}
 	}
 
 	// .page__guiding
 	&__guiding {
+		margin-bottom: toRem(102);
 	}
 }
