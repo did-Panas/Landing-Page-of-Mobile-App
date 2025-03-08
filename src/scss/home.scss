@@ -696,6 +696,23 @@
 .design-adv {
 	// .design-adv__title
 	&__title {
+		text-align: center;
+		max-width: toRem(1130);
+		margin: toRem(0) auto;
+		@include adaptiveValue("margin-bottom", 104, 43, 0, 1200, 768);
+
+		& h2 {
+			margin-bottom: toRem(17);
+		}
+
+		& p {
+			@include adaptiveValue("font-size", 24, 20, 0, 1200, 768);
+			line-height: 135%; /* 27/20 */
+
+			@media (min-width: $mobile) {
+				line-height: 129.166667%; /* 31/24 */
+			}
+		}
 	}
 
 	// .design-adv__container
@@ -704,31 +721,95 @@
 
 	// .design-adv__content
 	&__content {
+		@media (max-width: $mobile) {
+			padding: toRem(0) toRem(20);
+		}
 	}
 
 	// .design-adv__slider
 	&__slider {
+		padding: toRem(0) toRem(6);
+
+		@media (min-width: $mobile) {
+			padding-left: toRem(40);
+		}
+
+		@media (min-width: $tablet) {
+			padding-left: toRem(67);
+		}
 	}
 }
 
 .slider {
 	// .slider__wrapper
 	&__wrapper {
+		&.swiper-wrapper {
+			@media (max-width: $mobile) {
+				display: grid;
+				grid-row-gap: toRem(30);
+			}
+		}
 	}
 
 	// .slider__slide
 	&__slide {
+		display: flex;
+		align-items: center;
+		gap: toRem(27);
+
+		cursor: pointer;
+
+		@media (max-width: $mobile) {
+			&:nth-child(even) {
+				flex-direction: row-reverse;
+
+				@media (max-width: $mobile) {
+					padding: toRem(0) toRem(12) toRem(0) toRem(8);
+				}
+			}
+		}
+
+		@media (min-width: $mobile) {
+			flex-direction: column;
+			text-align: center;
+			@include adaptiveValue("gap", 70, 40, 2, 1200, 768);
+		}
 	}
 
 	// .slider__image
 	&__image {
+		aspect-ratio: 262 / 521;
+
+		@media (max-width: $mobile) {
+			flex: 0 0 toRem(120);
+		}
+
+		@media (min-width: $mobile) {
+			@include adaptiveValue("width", 263, 230, 2, 1440, 768);
+		}
+	}
+
+	// .slider__content
+	&__content {
+		padding: toRem(0) toRem(5);
 	}
 
 	// .slider__title
 	&__title {
+		@include adaptiveValue("margin-bottom", 50, 15, 0, 1440, 768);
+
+		@include adaptiveValue("font-size", 36, 21, 0, 1440, 768);
+		font-weight: 500;
+		line-height: 128.571429%; /* 27/21 */
+
+		@media (min-width: $mobile) {
+			line-height: 105.555556%; /* 38/36 */
+		}
 	}
 
 	// .slider__txt
 	&__txt {
+		@include adaptiveValue("font-size", 22, 16, 0, 1440, 768);
+		line-height: 131.25%; /* 21/16 */
 	}
 }
