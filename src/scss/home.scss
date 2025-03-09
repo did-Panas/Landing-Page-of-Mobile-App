@@ -814,26 +814,91 @@
 	}
 }
 
-// ===== CTA - CTA-dnld =================
+// ===== CTA - CTA-DNLD =================
 
 .cta-dnld {
+	background-color: var(--neutral-grey-3-42);
+
+	@media (min-width: $mobile) {
+		background-image: url("@img/cta-dnld/decorBG.svg");
+		background-position: 30% 17%; /* x y */
+		background-repeat: no-repeat;
+	}
+
 	// .cta-dnld__container
 	&__container {
 	}
 
+	// .cta-dnld__wrapper
+	&__wrapper {
+		display: grid;
+
+		padding: toRem(37) toRem(4) toRem(27);
+
+		@media (max-width: $mobile) {
+			justify-items: center;
+		}
+
+		@media (min-width: $mobile) {
+			grid-template-columns: auto 1fr;
+			gap: toRem(50);
+
+			padding-top: toRem(40);
+			padding-bottom: toRem(40);
+			@include adaptiveValue("padding-right", 157, 0, 2, 1200, 768);
+			@include adaptiveValue("padding-left", 157, 0, 2, 1200, 768);
+		}
+	}
+
 	// .cta-dnld__top
 	&__top {
+		align-self: center;
+
+		@include adaptiveValue("margin-bottom", 50, 29, 3, 767, 430);
 	}
 
 	// .cta-dnld__title
 	&__title {
+		margin-bottom: toRem(22);
+
+		& h2 {
+			margin-bottom: toRem(10);
+
+			font-size: toRem(32);
+			font-weight: 700;
+			letter-spacing: 0.03em;
+		}
+
+		& p {
+			font-size: toRem(20);
+			letter-spacing: 0.03em;
+		}
 	}
 
 	// .cta-dnld__btn
 	&__btn {
+		font-size: toRem(24);
+		letter-spacing: -0.02em;
+		text-wrap: nowrap;
 	}
 
 	// .cta-dnld__bl-content
 	&__bl-content {
+		max-width: toRem(583);
+		height: toRem(225);
+		width: 100%;
+
+		background-color: var(--neutral-grey-3);
+		border-radius: toRem(30);
+
+		@media (min-width: $mobile) {
+			justify-self: end;
+
+			height: toRem(345);
+		}
 	}
 }
+
+// ===== CTA - SECURITY =================
+
+// ===== CTA - CTA-FINAL =================

@@ -193,6 +193,10 @@ body {
 	// .page__design-advant
 	&__design-advant {
 		margin-bottom: toRem(60);
+
+		@media (min-width: $mobile) {
+			margin-bottom: toRem(215);
+		}
 	}
 
 	// .page__cta-download
