@@ -201,9 +201,11 @@ body {
 
 	// .page__cta-download
 	&__cta-download {
+		@include adaptiveValue("margin-bottom", 130, 95, 0, 1200, 768);
 	}
 
 	// .page__security
 	&__security {
+		@include adaptiveValue("margin-bottom", 135, 53, 0, 1200, 768);
 	}
 }
