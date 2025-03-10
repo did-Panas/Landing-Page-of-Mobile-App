@@ -1,4 +1,29 @@
-footer {
-	height: toRem(500);
-	background-color: burlywood;
+.footer {
+	// .footer__container
+	&__container {
+	}
+
+	// .footer__wrapper
+	&__wrapper {
+	}
+
+	// .footer__content
+	&__content {
+	}
+
+	// .footer__logo
+	&__logo {
+	}
+
+	// .footer__menu
+	&__menu {
+	}
+
+	// .footer__socials
+	&__socials {
+	}
+
+	// .footer__copyright
+	&__copyright {
+	}
 }
