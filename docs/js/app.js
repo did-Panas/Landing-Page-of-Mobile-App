@@ -3025,7 +3025,6 @@
                 }));
             };
             resizableSwiper("(min-width: 767.98px)", ".design-adv__slider", {
-                loop: true,
                 spaceBetween: 57,
                 slidesPerView: 3.37,
                 breakpoints: {
