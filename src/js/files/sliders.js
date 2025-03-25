@@ -145,7 +145,7 @@ function initSliders() {
 			'(min-width: 767.98px)',
 			'.design-adv__slider',
 			{
-				loop: true,
+				//loop: true,
 				spaceBetween: 57,
 				slidesPerView: 3.37,
 				// pagination: {
