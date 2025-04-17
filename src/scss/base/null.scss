@@ -64,3 +64,9 @@ h6 {
 	font-weight: inherit;
 	font-size: inherit;
 }
+
+img,
+video,
+canvas {
+	view-transition-name: none !important;
+}
